@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent" aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarcontent">
+            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0" role="tablist">
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                    <div class="btn-group dropstart">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardropdownhv" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-cog fa-2x"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbardropdownhv">
+                                <li><a class="dropdown-item" href="./" class="text-info"><i class="fas fa-undo-alt"></i> Retornar</a></li>
+                                <li><a class="dropdown-item" href="src/Actions/login/logout.php" class="text-danger"><i class="fas fa-sign-out-alt"></i> Salír</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<?php include __DIR__ . "/../../src/Utils/alert/alert_action.php"; ?>
+<div id="AlertPlaceholder">
+</div>
+<div id="contenido-body" class="container-fluid p-3">
+    <?php
+    switch ($_GET['tabla']) {
+        case 'rc_abconta_estudiantes':
+            include __DIR__ . "/tables/estudiantes.html";
+            break;
+        case 'rc_abconta_carreras':
+            include __DIR__ . "/tables/carreras.html";
+            break;
+        case 'rc_abconta_materias':
+            include __DIR__ . "/tables/materias.html";
+            break;
+        case 'rc_abconta_historico_notas':
+            include __DIR__ . "/tables/notas.html";
+            break;
+        case 'rc_abconta_historico_notas_ex':
+            include __DIR__ . "/tables/excepcion.html";
+            break;
+        default:
+            break;
+    }
+    ?>
+    <?php include __DIR__ . "/modal/modal.html"; ?>
+</div>

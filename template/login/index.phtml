@@ -1,0 +1,18 @@
+<nav class="navbar navbar-titulo justify-content-center">
+  Server side datatable PHP
+</nav>
+<div class="container container-login">
+  <div class="row p-4 justify-content-center">
+    <div class="card card-login"> 
+      <div class="card-body">
+        <form method="POST" action="src/Actions/login/login.php">
+          <img src="public/img/logo_vertical.svg" class="card-img">
+          <?php include __DIR__ . '/../../src/Utils/alert/alert_action.php' ?>
+          <input type="text" name="usuario" placeholder="Usuario" required> 
+          <input type="password" name="clave" placeholder="Contraseña" required>
+          <input type="submit" class="btn-sm" name="" value="Ingresar">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

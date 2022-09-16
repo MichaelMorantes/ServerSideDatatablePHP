@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent" aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarcontent">
+			<ul class="nav navbar-nav me-auto mb-2 mb-lg-0" role="tablist">
+			</ul>
+			<!-- <div class="d-flex"> -->
+			<div class="form-inline my-2 my-lg-0">
+				<ul class="navbar-nav mr-auto">
+					<div class="btn-group dropstart">
+						<li class="nav-item">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardropdownhv" role="button" data-bs-toggle="dropdown">
+								<i class="fas fa-cog fa-2x"></i>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbardropdownhv">
+								<li><a class="dropdown-item" href="src/Actions/login/logout.php" class="text-danger"><i class="fas fa-sign-out-alt"></i> Salír</a></li>
+							</ul>
+						</li>
+					</div>
+				</ul>
+			</div>
+			<!-- </div> -->
+		</div>
+	</div>
+</nav>
+<div class="container container-sm">
+	<div class="card-body">
+		<div class="accordion" id="accordion">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="accordion-first">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						Tablas
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="accordion-first" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<form method="GET">
+							<select class="form-select mb-3" name="tabla">
+								<option value="rc_abconta_estudiantes">Estudiantes</option>
+								<option value="rc_abconta_carreras">Carreras</option>
+								<option value="rc_abconta_materias">Materias</option>
+								<option value="rc_abconta_historico_notas">Historico notas</option>
+								<option value="rc_abconta_historico_notas_ex">Historico notas excepciones</option>
+							</select>
+							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+								<button type="submit" id="btn-menu" class="btn btn-primary">Aceptar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
